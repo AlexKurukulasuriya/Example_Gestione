@@ -49,7 +49,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v3
         with:
-          name: Gestione
+          name: Esempio_Gestione
           path: target/*.jar
           
   Release:
@@ -59,14 +59,14 @@ jobs:
       - name: Download file Jar Artifact
         uses: actions/download-artifact@v3
         with:
-          name: Gestione
+          name: Esempio_Gestione
       - name: Create Release
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: false
           automatic_release_tag: latest
-          files: Gestione
+          files: Esempio_Gestione
           
   Deployment:
     runs-on: ubuntu-latest
