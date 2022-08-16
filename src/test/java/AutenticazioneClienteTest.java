@@ -19,7 +19,7 @@ public class AutenticazioneClienteTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		clienteTest = new ClienteRegistrato("prova", "prova", "admin", "admin", "prova");
+		clienteTest = new ClienteRegistrato("Mario", "Rossi", "admin", "admin", "MarioRossi@gmail.com");
 	}
 
 	/**
@@ -28,12 +28,12 @@ public class AutenticazioneClienteTest {
 
 	@Test
 	public void getNomeTest() {
-		 assertEquals("prova",clienteTest.getNome());
+		 assertEquals("Mario",clienteTest.getNome());
 	}
 	
 	@Test
 	public void getCognomeTest() {
-		 assertEquals("prova",clienteTest.getCognome());
+		 assertEquals("Rossi",clienteTest.getCognome());
 	}
 	
 	@Test
@@ -48,7 +48,7 @@ public class AutenticazioneClienteTest {
 	
 	@Test
 	public void getEmailTest() {
-		 assertEquals("prova",clienteTest.getEmail());
+		 assertEquals("MarioRossi@gmail.com",clienteTest.getEmail());
 	}
 	
 	
